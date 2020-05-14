@@ -24,14 +24,10 @@ public class BookStore{
             this.setAddress(address);
             this.setSqFt(sqFt);
             this.setHasUsedBooks(hasUsedBooks);
+            
             titles = new ArrayList<String>();
             loadTitles();
-            setTitles(titles);
-        }
-      
-        private void setTitles(ArrayList<String> titles2) {
-        }
-        private void loadTitles() {
+            System.out.println(titles);
         }
 
         public boolean isHasUsedBooks() {
@@ -66,6 +62,22 @@ public class BookStore{
         public void setName(String name){
             this.name = name;
         }    
+            
+        private void loadTitles() {
+            try
+            {
+              Utils.loadStringsToArray(this.titles);
+            }
+            catch (IOException e)
+            {
+              // for now simply init the array to zero
+              System.out.println("Could not initilize the titles");
+              // make sure it is empty
+              this.titles = new ArrayList<String>();
+              
+            }
+        }
+
 
 
 

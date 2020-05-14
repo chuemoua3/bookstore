@@ -6,6 +6,7 @@ public class BookstoreMain{
         BookStore bookstore = new BookStore ("Books & Books", "123 Tryon St.", 3500, true);
 
         System.out.println("\nWhat is the address of the bookstore?");
+        System.out.println(bookstore.getName());
         System.out.println(bookstore.getAddress());
 
         System.out.println("\nWhat time does the bookstore open?");
@@ -21,7 +22,7 @@ public class BookstoreMain{
         System.out.println(bookstore.isHasUsedBooks() ? "Both":"New");
 
 
-
+        
     }
 
 
